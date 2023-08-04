@@ -1,0 +1,22 @@
+{
+  "name": "@devlabs/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rimraf .turbo node_modules"
+  },
+  "type": "module",
+  "dependencies": {
+    "@devlabs/tsconfig": "workspace:*",
+    "@types/react": "18.2.18",
+    "date-fns": "2.30.0",
+    "eslint": "8.46.0",
+    "eslint-config-devlabs": "workspace:*",
+    "react": "18.2.0",
+    "typescript": "5.1.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

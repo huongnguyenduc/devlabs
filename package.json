@@ -1,18 +1,53 @@
 {
   "private": true,
   "scripts": {
+    "storybook": "turbo run storybook",
     "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "start": "turbo run start",
+    "dev:template": "turbo run dev --filter=template...",
+    "build:template": "turbo run build --filter=template...",
+    "start:template": "turbo run start --filter=template...",
+    "lint": "turbo run lint -- --fix",
+    "prettier": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "clean": "turbo run clean && rimraf node_modules pnpm-lock.yaml",
+    "postinstall": "pnpm exec simple-git-hooks",
+    "pnpm:install": "pnpm install",
+    "pnpm:update": "pnpm update -r --latest --interactive",
+    "pnpm:reinstall": "pnpm clean && pnpm pnpm:install"
   },
-  "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
-    "turbo": "latest"
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
+    "tailwindFunctions": [
+      "cva",
+      "cx"
+    ],
+    "tailwindAttributes": [
+      "classNames"
+    ],
+    "singleQuote": true,
+    "trailingComma": "all"
   },
-  "packageManager": "pnpm@8.6.10",
-  "name": "dev-labs"
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "dependencies": {
+    "change-case": "4.1.2",
+    "encoding": "0.1.13",
+    "eslint": "8.46.0",
+    "eslint-config-devlabs": "workspace:*",
+    "lint-staged": "13.2.3",
+    "prettier": "3.0.1",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "rimraf": "5.0.1",
+    "simple-git-hooks": "2.9.0",
+    "turbo": "1.10.12",
+    "typescript": "5.1.6"
+  },
+  "packageManager": "pnpm@8.6.6"
 }
