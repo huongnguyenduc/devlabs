@@ -38,7 +38,7 @@ export const MobileFilters: FC<MobileFiltersProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild className="lg:hidden">
         <Button endIcon={PlusIcon}>Filters</Button>
       </DialogTrigger>
       <DialogContent>
