@@ -13,13 +13,7 @@ import { Info } from '@/components/info';
  * Component: PreviewModal
  * ------------------------------------------------------------------------------------------------------------------ */
 
-type PreviewModalVariantProps = {};
-
-export type PreviewModalProps = Omit<
-  DialogProps,
-  keyof PreviewModalVariantProps
-> &
-  PreviewModalVariantProps;
+export type PreviewModalProps = DialogProps;
 
 export const PreviewModal: FC<PreviewModalProps> = ({ ...props }) => {
   const previewModal = usePreviewModal();
