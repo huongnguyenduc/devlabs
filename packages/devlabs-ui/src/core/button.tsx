@@ -23,7 +23,8 @@ type ButtonVariant =
   | 'ghost'
   | 'outline'
   | 'primary'
-  | 'secondary';
+  | 'secondary'
+  | 'white';
 
 const sizes: {
   icon: boolean;
@@ -37,7 +38,7 @@ const sizes: {
     icon: true,
     sizes: [
       {
-        variant: ['primary', 'secondary', 'destructive', 'ghost'],
+        variant: ['primary', 'secondary', 'destructive', 'ghost', 'white'],
         size: 'sm',
         className: 'px-2',
       },
@@ -48,7 +49,7 @@ const sizes: {
       },
       // ---
       {
-        variant: ['primary', 'secondary', 'destructive', 'ghost'],
+        variant: ['primary', 'secondary', 'destructive', 'ghost', 'white'],
         size: 'md',
         className: 'px-3',
       },
@@ -59,7 +60,7 @@ const sizes: {
       },
       // ---
       {
-        variant: ['primary', 'secondary', 'destructive', 'ghost'],
+        variant: ['primary', 'secondary', 'destructive', 'ghost', 'white'],
         size: 'lg',
         className: 'px-4',
       },
@@ -74,7 +75,7 @@ const sizes: {
     icon: false,
     sizes: [
       {
-        variant: ['primary', 'secondary', 'destructive', 'ghost'],
+        variant: ['primary', 'secondary', 'destructive', 'ghost', 'white'],
         size: 'sm',
         className: 'px-4',
       },
@@ -85,7 +86,7 @@ const sizes: {
       },
       // ---
       {
-        variant: ['primary', 'secondary', 'destructive', 'ghost'],
+        variant: ['primary', 'secondary', 'destructive', 'ghost', 'white'],
         size: 'md',
         className: 'px-5',
       },
@@ -96,7 +97,7 @@ const sizes: {
       },
       // ---
       {
-        variant: ['primary', 'secondary', 'destructive', 'ghost'],
+        variant: ['primary', 'secondary', 'destructive', 'ghost', 'white'],
         size: 'lg',
         className: 'px-6',
       },
@@ -135,6 +136,8 @@ export const buttonVariants = cva(
       variant: {
         primary:
           'bg-primary text-primary-foreground [&:not([data-disabled])]:hover:bg-primary/90',
+        white:
+          'text-white-foreground bg-white [&:not([data-disabled])]:hover:bg-white/90',
         secondary:
           'bg-secondary text-secondary-foreground [&:not([data-disabled])]:hover:bg-secondary/90',
         outline:
@@ -169,7 +172,7 @@ export const buttonVariants = cva(
     },
     compoundVariants: [
       {
-        variant: ['primary', 'secondary', 'destructive'],
+        variant: ['primary', 'secondary', 'destructive', 'white'],
         className: 'data-disabled:bg-opacity-50',
       },
       {

@@ -9,7 +9,7 @@
   "type": "module",
   "dependencies": {
     "@devlabs/tsconfig": "workspace:*",
-    "@types/react": "18.2.18",
+    "@types/react": "18.2.20",
     "date-fns": "2.30.0",
     "eslint": "8.46.0",
     "eslint-config-devlabs": "workspace:*",

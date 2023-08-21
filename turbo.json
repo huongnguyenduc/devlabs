@@ -3,9 +3,10 @@
   "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["db:generate", "^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
       "env": [
+        "CLERK_*",
         "NEXT_PUBLIC_*",
         "GITHUB_*",
         "GOOGLE_*",
@@ -26,9 +27,17 @@
       "cache": false
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["db:generate"]
     },
     "clean": {
+      "cache": false
+    },
+    "db:generate": {},
+    "db:push": {
+      "cache": false
+    },
+    "db:studio": {
       "cache": false
     }
   }

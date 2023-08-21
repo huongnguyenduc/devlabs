@@ -481,7 +481,7 @@ export type TableClassNames = {
 
 export interface DataTableContentProps<TData> {
   table: TableType<TData>;
-  classNames: TableClassNames;
+  classNames?: TableClassNames;
   columns: ColumnDef<TData>[];
 }
 
