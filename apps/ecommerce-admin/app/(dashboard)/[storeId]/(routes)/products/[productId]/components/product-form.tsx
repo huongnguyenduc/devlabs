@@ -24,11 +24,12 @@ import { toast } from '@devlabs/ui/src/use-toast';
 import { ImageUpload } from '@/components/ui/image-upload/image-upload';
 import { DeleteProductButton } from './delete-product-button';
 import { page } from '@/lib/constants/page';
-import { Select, SelectValue } from '@devlabs/ui/src/core/select';
 import {
+  Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+  SelectValue,
 } from '@devlabs/ui/src/select';
 import { Checkbox } from '@devlabs/ui/src/checkbox';
 
@@ -72,9 +73,9 @@ export const ProductForm: FC<ProductFormProps> = ({
       : {
           name: '',
           price: 0,
-          categoryId: '',
-          colorId: '',
-          sizeId: '',
+          categoryId: undefined,
+          colorId: undefined,
+          sizeId: undefined,
           isFeatured: false,
           isArchived: false,
           images: [],
@@ -270,10 +271,7 @@ export const ProductForm: FC<ProductFormProps> = ({
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue
-                            defaultValue={field.value}
-                            placeholder="Select a color"
-                          />
+                          <SelectValue placeholder="Select a color" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>

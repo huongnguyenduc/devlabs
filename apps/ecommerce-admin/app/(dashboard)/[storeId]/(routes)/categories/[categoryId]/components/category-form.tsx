@@ -22,11 +22,12 @@ import { Heading } from '@/components/ui/heading/heading';
 import { toast } from '@devlabs/ui/src/use-toast';
 import { DeleteCategoryButton } from './delete-category-button';
 import { page } from '@/lib/constants/page';
-import { Select, SelectValue } from '@devlabs/ui/src/core/select';
 import {
+  Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+  SelectValue,
 } from '@devlabs/ui/src/select';
 
 /* ---------------------------------------------------------------------------------------------------------------------
@@ -56,7 +57,7 @@ export const CategoryForm: FC<CategoryFormProps> = ({
     resolver: zodResolver(categorySchema),
     defaultValues: initialData || {
       name: '',
-      billboardId: '',
+      billboardId: undefined,
     },
   });
 
