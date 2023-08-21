@@ -97,6 +97,7 @@ export const SettingsForm: FC<SettingsFormProps> = ({
             <Button
               className="ml-auto"
               disabled={form.formState.isSubmitting || isPending}
+              loading={form.formState.isSubmitting || isPending}
               type="submit"
             >
               Save changes

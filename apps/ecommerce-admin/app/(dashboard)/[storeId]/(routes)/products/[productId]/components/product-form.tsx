@@ -332,6 +332,7 @@ export const ProductForm: FC<ProductFormProps> = ({
             <Button
               className="ml-auto"
               disabled={form.formState.isSubmitting || isPending}
+              loading={form.formState.isSubmitting || isPending}
               type="submit"
             >
               {action}

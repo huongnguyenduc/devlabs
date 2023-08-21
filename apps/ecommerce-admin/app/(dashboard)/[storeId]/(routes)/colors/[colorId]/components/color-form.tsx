@@ -148,6 +148,7 @@ export const ColorForm: FC<ColorFormProps> = ({
             <Button
               className="ml-auto"
               disabled={form.formState.isSubmitting || isPending}
+              loading={form.formState.isSubmitting || isPending}
               type="submit"
             >
               {action}
