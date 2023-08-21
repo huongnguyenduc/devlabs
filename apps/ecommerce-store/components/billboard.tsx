@@ -22,7 +22,7 @@ export const Billboard: FC<BillboardProps> = ({
 }) => (
   <div {...props} className={billboardVariants({ className })}>
     <div
-      className="relative aspect-square overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat md:aspect-[2.4/1]"
+      className="relative aspect-square overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat md:aspect-[3.8/1]"
       style={{ backgroundImage: `url(${data?.imageUrl})` }}
     >
       <div className="flex h-full w-full flex-col items-center justify-center gap-y-8 text-center">
