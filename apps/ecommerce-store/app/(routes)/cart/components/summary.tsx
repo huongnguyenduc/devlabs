@@ -57,11 +57,6 @@ export const Summary: FC<SummaryProps> = ({ className, ...props }) => {
       {
         productIds: items.map((item) => item.id),
       },
-      {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-      },
     );
 
     window.location = response.data.url;
