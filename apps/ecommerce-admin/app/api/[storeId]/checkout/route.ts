@@ -5,7 +5,7 @@ import { stripe } from '@/lib/payment/stripe';
 import * as process from 'process';
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': process.env.STOREFRONT_URL,
+  'Access-Control-Allow-Origin': 'https://devlabs-ecommerce-store.vercel.app',
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, content-type',
 };
