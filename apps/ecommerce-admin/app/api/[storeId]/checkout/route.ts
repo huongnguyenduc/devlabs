@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/database/prisma';
 import Stripe from 'stripe';
 import { stripe } from '@/lib/payment/stripe';
-import * as process from 'process';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': 'https://devlabs-ecommerce-store.vercel.app',
@@ -70,8 +69,8 @@ export async function POST(
     phone_number_collection: {
       enabled: true,
     },
-    success_url: `${process.env.STOREFRONT_URL}/cart?success=1`,
-    cancel_url: `${process.env.STOREFRONT_URL}/cart?canceled=1`,
+    success_url: `https://devlabs-ecommerce-store.vercel.app/cart?success=1`,
+    cancel_url: `https://devlabs-ecommerce-store.vercel.app/cart?canceled=1`,
     metadata: {
       orderId: order.id,
     },
