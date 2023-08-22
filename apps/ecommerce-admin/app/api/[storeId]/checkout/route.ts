@@ -5,7 +5,7 @@ import { stripe } from '@/lib/payment/stripe';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-  'Access-Control-Allow-Methods': 'GET,DELETE,OPTIONS,POST,PUT',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
@@ -35,14 +35,14 @@ export async function POST(
 
   products.forEach((product) => {
     line_items.push({
+      quantity: 1,
       price_data: {
-        currency: 'usd',
+        currency: 'USD',
         product_data: {
           name: product.name,
         },
         unit_amount: product.price.toNumber() * 100,
       },
-      quantity: 1,
     });
   });
 
