@@ -15,7 +15,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.23.2",
+    "@clerk/nextjs": "^5.0.1",
     "@devlabs/tailwindcss": "workspace:*",
     "@devlabs/tsconfig": "workspace:*",
     "@devlabs/ui": "workspace:*",
@@ -30,11 +30,11 @@
     "eslint": "8.47.0",
     "eslint-config-devlabs": "workspace:*",
     "lucide-react": "0.263.1",
-    "next": "13.4.19",
-    "next-cloudinary": "^4.18.0",
+    "next": "14.2.0",
+    "next-cloudinary": "^6.6.2",
     "next-themes": "^0.2.1",
     "postcss": "8.4.28",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "7.45.4",
     "recharts": "^2.7.3",
@@ -46,6 +46,14 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "prisma": "^5.1.1"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": " ^8.0.0",
+    "eslint-config-next": "14.2.0",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }

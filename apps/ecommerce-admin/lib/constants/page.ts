@@ -1,8 +1,8 @@
 export const page = {
   // Authenticated pages
   auth: {
-    login: '/auth/login',
-    register: '/auth/register',
+    login: '/login',
+    register: '/register',
   },
 
   // Common

@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 import { page } from '@/lib/constants/page';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/database/prisma';

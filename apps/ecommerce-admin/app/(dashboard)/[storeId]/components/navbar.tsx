@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority';
 import { FC, HTMLAttributes } from 'react';
-import { UserButton } from '@clerk/nextjs';
+import { SignedIn, UserButton } from '@clerk/nextjs';
 import { page } from '@/lib/constants/page';
 import { MainNav } from '@/app/(dashboard)/[storeId]/components/main-nav';
 import StoreSwitcher from '@/app/(dashboard)/[storeId]/components/store-switcher';
@@ -27,7 +27,9 @@ export const Navbar: FC<NavbarProps> = ({ className, items, ...props }) => (
       <MainNav />
       <div className="ml-auto flex items-center space-x-4">
         <ThemeToggle />
-        <UserButton afterSignOutUrl={page.home} />
+        <SignedIn>
+          <UserButton afterSignOutUrl={page.home} />
+        </SignedIn>
       </div>
     </div>
   </div>

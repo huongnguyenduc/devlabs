@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 import { ReactNode } from 'react';
 import { redirect } from 'next/navigation';
 import { page } from '@/lib/constants/page';

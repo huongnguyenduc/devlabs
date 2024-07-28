@@ -13,7 +13,8 @@
         "NEXTAUTH_*",
         "PUSHER_*",
         "STRIPE_*",
-        "STOREFRONT_URL"
+        "STOREFRONT_URL",
+        "DATABASE_*"
       ]
     },
     "start": {
