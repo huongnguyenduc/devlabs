@@ -1,16 +1,50 @@
 ## Getting Started
 
-First, run the development server:
+First, install the packages:
 
 ```bash
-yarn dev
+pnpm install
+```
+
+Rename the `.env.example` file to `.env` and fill in the environment variables.
+
+```bash
+# Ecommerce Store Url (Use for redirecting to the store)
+STOREFRONT_URL=
+
+# Clerk (Authentication)
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
+
+# Database
+DATABASE_URL=
+
+# Cloudinary
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+
+# Stripe
+STRIPE_WEBHOOK_SECRET=
+STRIPE_API_KEY=
+```
+
+For first time setup, run the following command to create the database schema:
+
+```bash
+pnpm run db:generate
+pnpm run db:push
+```
+
+Then, run the development server:
+
+```bash
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3000/api/hello](http://localhost:3000/api/hello).
 
 ## Learn More
 

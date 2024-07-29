@@ -1,16 +1,28 @@
 ## Getting Started
 
-First, run the development server:
+First, install the packages:
 
 ```bash
-yarn dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Rename the `.env.example` file to `.env` and fill in the environment variables.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Provide the URL of the API (From the Ecommerce Admin API)
+NEXT_PUBLIC_API_URL=<API_URL>
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3000/api/hello](http://localhost:3000/api/hello).
+# Billboard ID for the homepage
+NEXT_PUBLIC_HOMEPAGE_BILLBOARD_ID=<BILLBOARD_ID>
+```
+
+Then, run the development server:
+
+```bash
+pnpm run dev
+```
+
+Open [http://localhost:3001](http://localhost:3000) with your browser to see the result.
 
 ## Learn More
 

@@ -1,14 +1,6 @@
-# Turborepo starter
+# DevLabs Turborepo
 
-This is an official starter Turborepo.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+This is a repository that I put my experiments with Turborepo.
 
 ## What's inside?
 
@@ -16,11 +8,16 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `apps`: contain [Next.js](https://nextjs.org/) apps:
+  - `ecommerce-store`: an e-commerce store front-end
+  - `ecommerce-admin`: an e-commerce store admin panel with a Rest API
+  - `template`: a template for creating new Next.js apps
+- `packages`: contain shared packages:
+  - `devlabs-ui`: a stub React component library shared across applications
+  - `eslint-config-deblabs`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+  - `devlabs-tsconfig`: `tsconfig.json`s used throughout the monorepo
+  - `devlabs-tailwindcss`: `tailwind.config.js` used throughout the monorepo
+  - `devlabs-utils`: a collection of utility functions shared across applications
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
