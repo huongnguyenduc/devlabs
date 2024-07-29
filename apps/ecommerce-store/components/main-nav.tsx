@@ -10,7 +10,9 @@ import { Category } from '@/lib/types';
  * Component: MainNav
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const mainNavVariants = cva('mx-6 flex items-center space-x-4 lg:space-x-6');
+const mainNavVariants = cva(
+  'mx-6 flex items-center space-x-4 overflow-auto lg:space-x-6',
+);
 
 type MainNavVariantProps = VariantProps<typeof mainNavVariants> & {
   data: Category[];

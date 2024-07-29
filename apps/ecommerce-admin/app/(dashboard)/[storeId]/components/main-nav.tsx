@@ -10,7 +10,9 @@ import { twMerge } from 'tailwind-merge';
  * Component: MainNav
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const mainNavVariants = cva('flex items-center space-x-4 lg:space-x-6');
+const mainNavVariants = cva(
+  'flex items-center space-x-4 overflow-auto lg:space-x-6',
+);
 
 type MainNavVariantProps = VariantProps<typeof mainNavVariants>;
 
